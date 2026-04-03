@@ -80,7 +80,7 @@ fun GameScreen(
             style = typography.titleLarge,
         )
         GameLayout(
-            currentScrambledWord = gameUiState.currentScrambleWord,
+            currentScrambledWord = gameUiState.currentScrambledWord,
             isGuessWrong = gameUiState.isGuessedWordWrong,
             userGuess = gameViewModel.userGuess,
             wordCount = gameUiState.currentWordCount,
