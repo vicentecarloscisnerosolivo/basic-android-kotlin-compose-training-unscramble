@@ -29,6 +29,7 @@ import com.example.unscramble.ui.GameViewModel
 import com.example.unscramble.ui.theme.UnscrambleTheme
 
 class MainActivity : ComponentActivity() {
+    private val vm: GameViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
@@ -37,7 +38,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                 ) {
-                    GameScreen(gameViewModel = GameViewModel())
+                    GameScreen(vm)
                 }
             }
         }
