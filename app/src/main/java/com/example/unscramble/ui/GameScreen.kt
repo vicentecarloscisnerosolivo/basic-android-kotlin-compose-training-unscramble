@@ -54,12 +54,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.unscramble.R
 import com.example.unscramble.ui.theme.UnscrambleTheme
 
 @Composable
 fun GameScreen(
-    gameViewModel: GameViewModel
+    gameViewModel: GameViewModel = viewModel()
 ) {
     val gameUiState by gameViewModel.uiState.collectAsState()
 
@@ -252,6 +253,6 @@ private fun FinalScoreDialog(
 @Composable
 fun GameScreenPreview() {
     UnscrambleTheme {
-        GameScreen(gameViewModel = GameViewModel())
+        GameScreen()
     }
 }
